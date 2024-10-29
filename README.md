@@ -24,5 +24,7 @@ Streak Based system:
 
 Note: Pressing the restart button WILL reset the streak!
 
-(You can press F12 to access the console which gives the solution to each level, however it is not recommended for fair play)
+
+(You can press F12 to access the console which gives the solution to each round)
+
 There is an excel sheet which contains all of the sets in an easy to read manner.
