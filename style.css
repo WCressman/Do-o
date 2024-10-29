@@ -1,0 +1,187 @@
+body {
+    background-color: rgb(137, 214, 239);
+  }
+  
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 75px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+header h1 {
+    display: inline-block; /* Restricts the clickable area to the text itself */
+    cursor: pointer;
+}
+
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+
+
+
+/* Center the word container */
+#word-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px; /* Add a small gap from the header */
+    gap: 100px;
+}
+
+/* Style for each word container */
+#word1-container, #word2-container {
+    display: flex;
+    margin: 10px;
+}
+
+.fancy-line {
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Style each letter box */
+#word1-container div, #word2-container div {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(107, 168, 188);
+    box-sizing: border-box;
+    text-transform: uppercase; /* Capitalize letters */
+}
+
+/* Center the button */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+
+
+/* Style each input box for the short word guess */
+#shortword-inputs input {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.1rem;
+    text-align: center;
+    border: 2px solid rgb(107, 168, 188);
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; /* Capitalize input */
+}
+
+#shortword-guess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style each input box for the long word guess */
+#longword-input1 input, #longword-input2 input {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.1rem;
+    text-align: center;
+    border: 2px solid #6ba8bc;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+/* Center the long word input containers and ensure consistent spacing */
+#longword-guess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+/* Initial style for the bear image */
+#streak-bear-animation {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    z-index: 1000;
+    animation: winAnimation 2s ease-in-out forwards;
+}
+
+/* Keyframes for the animation sequence */
+@keyframes winAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    30% {
+        transform: translate(-50%, -50%) scale(2); /* Expands in center */
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(0.5); /* Shrinks */
+    }
+    80% {
+        transform: translate(calc(50vw - 25px), calc(-50vh + 25px)) scale(0.5); /* Moves diagonally */
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(calc(100vw - 50px), calc(-100vh + 50px)) scale(0.2); /* Final shrink in top-right */
+        opacity: 0; /* Fades out */
+    }
+}
+
+#streak-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    z-index: 1000;
+}
+
+#bear-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#streak-number {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
